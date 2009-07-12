@@ -7,6 +7,8 @@ The mashup is created from mp3s from each artist. These are sorted according to 
 
 I'm really sorry about my python. I have no idea what I'm doing and it's all a big mess. Don't expect anything to actually work, I just know it has at least once.
 
+I don't know how to set python dependancies but the most notable one you'll need is the.echonest's python remix library.
+
 How To
 ======
 
