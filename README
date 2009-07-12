@@ -1,3 +1,23 @@
 BotTalk
+=======
 
+BotTalk generates Girl Talk-esque mp3 mashups of a last.fm user's top artists. This is all done using the.echonest.com and the first ever results can be found http://soundcloud.com/thesmith/bottalk-last-fm-user-thesmith
+
+The mashup is created from mp3s from each artist. These are sorted according to pitch and each track has a drum track created by taking the bars from the next track that match the key of the current track. Each track is then mixed with it's beat track, with the beat track looped. The resulting mix tracks are then ordered by loudness (why not) and 30ish seconds of each are bolted together to create the final mix-tape.
+
+I'm really sorry about my python. I have no idea what I'm doing and it's all a big mess. Don't expect anything to actually work, I just know it has at least once.
+
+How To
+======
+
+# create necessary directories, cause I'm lazy
 mkdir f mp3 mixes
+
+# get a last.fm user's top artists and use the.echonest to download one mp3 for each
+python lastfm.py thesmith
+
+# create seperate master and beat files and then create individual mix files, all in f/
+python bottalk.py
+
+# squash all the successful mix files together, with some shady assed mixing
+python splicer.py thesmith
